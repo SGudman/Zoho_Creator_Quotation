@@ -1,0 +1,15 @@
+string getBoatMakerName(int varID)
+{
+	info "FROM FUNCTION: varID = " + varID;
+	info "FROM FUNCTION: Boat manufacturer table record count = " + Boat_Manufacturers.count();
+	if(Boat_Manufacturers.count() > 0)
+	{
+		boat_maker = Boat_Manufacturers[ID == input.varID];
+		info "FROM FUNCTION: Boat_Manufacturers.Company_Name = " + boat_maker.Company_Name;
+		return boat_maker.Company_Name;
+	}
+	else
+	{
+		return null;
+	}
+}
